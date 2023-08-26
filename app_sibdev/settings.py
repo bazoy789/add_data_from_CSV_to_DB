@@ -78,6 +78,13 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'app_sibdev.wsgi.application'
 
+CACHES = {
+    'default': {
+        'BACKEND': 'django.core.cache.backends.filebased.FileBasedCache',
+        'LOCATION': os.path.join(BASE_DIR, "cache"),
+    }
+}
+
 
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
